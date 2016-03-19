@@ -1,3 +1,7 @@
+///<File Name: FirstPersonController.cs>
+///<Author Name: Provided by professor>
+///<Description: This code is helping the player to move jump and walk. Basically it looks after all the functionalites related to the player>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;

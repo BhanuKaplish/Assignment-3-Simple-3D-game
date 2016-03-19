@@ -1,3 +1,7 @@
+///<File Name: RigidbodyFirstPersonController.cs>
+///<Author Name: Provided by professor>
+///<Description: This code rigidbody functionality to the player>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;

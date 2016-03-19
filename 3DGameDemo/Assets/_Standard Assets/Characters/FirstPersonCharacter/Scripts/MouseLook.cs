@@ -1,3 +1,7 @@
+///<File Name: MouseLook.cs>
+///<Author Name: Provided by professor>
+///<Description: This code helps to use mouse for providing directions to the player>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;

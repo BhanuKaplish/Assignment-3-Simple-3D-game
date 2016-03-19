@@ -1,3 +1,7 @@
+///<File Name: HeadBob.cs>
+///<Author Name: Provided by professor>
+///<Description: This code takes care of the camera position of the first person controller>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.Utility;
