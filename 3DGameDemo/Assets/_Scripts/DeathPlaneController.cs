@@ -8,9 +8,7 @@ public class DeathPlaneController : MonoBehaviour {
 
     //Private Instance Variables
     private AudioSource _HurtSound;
-
-
-	 
+    
     // Use this for initialization
 	void Start () {
         this._HurtSound = gameObject.GetComponent<AudioSource>();
@@ -24,7 +22,6 @@ public class DeathPlaneController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log(this.spawnPoint.position);
             Transform playerTransform = other.gameObject.GetComponent<Transform>();
             playerTransform.position = this.spawnPoint.position;
             gameController.LivesValue -= 1;

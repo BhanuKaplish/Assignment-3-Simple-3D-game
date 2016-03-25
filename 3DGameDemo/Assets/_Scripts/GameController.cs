@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     //Private Instance variables
@@ -86,12 +87,7 @@ public class GameController : MonoBehaviour {
         this.GameOverLabel.enabled = false;
         this.HighscoreLabel.enabled = false;
         this.RestartButton.gameObject.SetActive(false);
-
-        //for (int asteroidCount = 0; asteroidCount < this.asteroidNumber; asteroidCount++)
-        //{
-        //    Instantiate(asteroid.gameObject);
-        //}
-        
+                
     }
     private void _endGame()
     {
@@ -105,9 +101,10 @@ public class GameController : MonoBehaviour {
         this.RestartButton.gameObject.SetActive(true);
         //this._gameoverSound.Play();
     }
-    //Public methods
-    //public void RestartButtonClick()
-    //{
-    //    Application.LoadLevel("Main");
-    //}
+   // Public methods
+    public void RestartButtonClick()
+    {
+        //Application.LoadLevel("main");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
