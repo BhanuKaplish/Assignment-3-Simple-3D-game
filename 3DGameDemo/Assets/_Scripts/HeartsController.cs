@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Coins : MonoBehaviour {
+public class HeartsController : MonoBehaviour {
     //Public Instance Variables
     public GameController gameController;
 
     //Private Instance Variables
-    private AudioSource _CoinSound;
+    private AudioSource _BonusSound;
 
     // Use this for initialization
     void Start () {
-        this._CoinSound = gameObject.GetComponent<AudioSource>();
+        this._BonusSound = gameObject.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -21,9 +21,10 @@ public class Coins : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            this._CoinSound.Play();
-            gameController.ScoreValue += 100;
+            this._BonusSound.Play();
+            gameController.LivesValue += 1;
             Destroy(gameObject);
         }
     }
 }
+
