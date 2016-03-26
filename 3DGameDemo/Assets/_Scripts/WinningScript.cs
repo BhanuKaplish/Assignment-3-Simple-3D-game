@@ -16,7 +16,7 @@ public class WinningScript : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("WinningCup"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Touching Cup");
             Destroy(gameObject);
