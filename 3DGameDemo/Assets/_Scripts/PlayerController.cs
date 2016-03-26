@@ -10,10 +10,16 @@ public class PlayerController : MonoBehaviour {
     //Public Instance Variables
     public GameController gameController;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    //Private Instance Variables
+    //private AudioSource _BonusSound;
+    private AudioSource _CoinSound;
+
+    // Use this for initialization
+    void Start ()
+    {
+        //this._BonusSound = gameObject.GetComponent<AudioSource>();
+        this._CoinSound = gameObject.GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,18 +31,22 @@ public class PlayerController : MonoBehaviour {
         //if(other.gameObject.CompareTag("Enemy"))
         //{
         //    this._asteroidSound.Play();
-        //    this.gameController.livesValue -= 1;
         //}
-        if (other.gameObject.CompareTag("Heart"))
-        {
-            //this._asteroidSound.Play();
-            this.gameController.LivesValue += 1;
-        }
+        //if (other.gameObject.CompareTag("Heart"))
+        //{
+        //    this._BonusSound.Play();
+        //}
         if (other.gameObject.CompareTag("Coins"))
         {
-            //this._coinSound.Play();
-            this.gameController.ScoreValue += 100;
-            Destroy(gameObject);
+            Debug.Log("TheCoin!");
+            this._CoinSound.Play();
+        }
+    }
+    public void OnCollisionEnter(Collision c)
+    {
+        if (c.gameObject.CompareTag("Coins"))
+        {
+            this._CoinSound.Play();
         }
     }
 }
